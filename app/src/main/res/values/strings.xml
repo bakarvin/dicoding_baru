@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="pjg">Panjang</string>
+    <string name="lbr">Lebar</string>
+    <string name="ting">Tinggi</string>
+    <string name="hit">Hitung</string>
+    <string name="jml">Hasil</string>
+
 </resources>
