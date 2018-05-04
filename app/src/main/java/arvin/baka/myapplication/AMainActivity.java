@@ -1,5 +1,6 @@
 package arvin.baka.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class AMainActivity extends AppCompatActivity {
 
@@ -28,11 +30,15 @@ public class AMainActivity extends AppCompatActivity {
     @BindView(R.id.result)
     TextView hasil;
 
+    @BindView(R.id.asg2)
+    Button asg2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.a_main);
 
+        //Enable butterKnife
         ButterKnife.bind(this);
 
         btnhasil.setOnClickListener(new View.OnClickListener() {
@@ -78,5 +84,9 @@ public class AMainActivity extends AppCompatActivity {
         outState.putString(STATE_HASIL, hasil.getText().toString());
         super.onSaveInstanceState(outState);
     }
-
+    @OnClick(R.id.asg2)
+    void intent(){
+        Intent pindah = new Intent(AMainActivity.this, contoh.class);
+            startActivity(pindah);
+    }
 }

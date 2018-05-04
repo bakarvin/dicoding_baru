@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".contoh" />
+        <activity android:name=".MoveActivity" />
+        <activity android:name=".MoveData"></activity>
     </application>
 
 </manifest>
